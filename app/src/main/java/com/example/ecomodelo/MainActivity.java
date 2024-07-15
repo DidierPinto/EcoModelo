@@ -1,5 +1,6 @@
 package com.example.ecomodelo;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -10,11 +11,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int id;
-    private String nombre;
-    private String email;
-    private String password;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-
-
+        Intent login = new Intent(MainActivity.this, Login.class );
+        startActivity(login);
     }
 }
